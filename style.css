@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: black;
+}
+header{
+    color: whitesmoke;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid white;
+}
+
+main{
+    color: antiquewhite;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.top p{
+    margin: 2rem;
+    text-align: center;
+}
+
+.compte{
+    border: solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 300px;
+    
+}
+#combiendetemps{
+    height: 200%;
+    width: 100%;
+    margin: auto;
+    border-radius: 10px 10px 10px;
+    text-align: center;
+}
+
+button{
+    border-radius: 10px 10px 10px;
+    height: 120%;
+}
+
+footer{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    color: antiquewhite;
+    border: solid white;
+    width: 100%;
+    justify-content: center;
+
+}
