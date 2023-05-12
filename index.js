@@ -37,7 +37,7 @@ function demarrerMinuteur(dureeEnSecondes) {
       }
       restart.addEventListener("click",function(){
         clearInterval(minuteur);
-        howMany.value = "";
+        howMany.value = "45";
         compte.innerHTML = "";
         alert.innerHTML= "";
       })
@@ -51,7 +51,6 @@ function demarrerMinuteur(dureeEnSecondes) {
   start.addEventListener("click", function(){
     demarrerMinuteur(howMany.value);
     alert.innerHTML = "";
-     howMany.innerHTML = 45;
       
   });
 
