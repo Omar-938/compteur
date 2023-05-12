@@ -51,6 +51,8 @@ function demarrerMinuteur(dureeEnSecondes) {
   start.addEventListener("click", function(){
     demarrerMinuteur(howMany.value);
     alert.innerHTML = "";
+     howMany.value = "45";
+      
   });
 
  
