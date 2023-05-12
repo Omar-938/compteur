@@ -37,7 +37,7 @@ function demarrerMinuteur(dureeEnSecondes) {
       }
       restart.addEventListener("click",function(){
         clearInterval(minuteur);
-        howMany.value = "45";
+        howMany.value = 45;
         compte.innerHTML = "";
         alert.innerHTML= "";
       })
