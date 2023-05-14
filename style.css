@@ -57,11 +57,15 @@ button{
 
 footer{
     display: flex;
-    position: absolute;
+    position: relative;
     bottom: 0%;
     color: antiquewhite;
     border: solid white;
     width: 100%;
     justify-content: center;
 
+}
+
+#rachid{
+    margin-bottom: 2rem;
 }

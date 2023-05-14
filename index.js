@@ -3,6 +3,11 @@ const howMany = document.querySelector('#combiendetemps');
 const compte = document.querySelector("#temps");
 const alert = document.querySelector("#alert");
 const restart = document.querySelector("#restart");
+const temps15 = document.querySelector("#temps15");
+const temps30 = document.querySelector("#temps30");
+const temps45 = document.querySelector("#temps45");
+const temps60 = document.querySelector("#temps60");
+const rachid = document.querySelector("#rachid");
 
 
 
@@ -16,7 +21,7 @@ function demarrerMinuteur(dureeEnSecondes) {
       dureeEnMillisecondes -= 1000;
   
       let tempsRestantEnSecondes = (dureeEnMillisecondes) / 1000;
-  
+        
       compte.innerHTML = `Il te reste ${tempsRestantEnSecondes} Secondes`;
        if(tempsRestantEnSecondes >= howMany.value * 0.66){
         compte.style.color = "green";
@@ -35,9 +40,18 @@ function demarrerMinuteur(dureeEnSecondes) {
         howMany.value = ""
         alert.innerHTML = "Temps écoulé !! Personne Suivante !!"
       }
+      if(howMany.value === "0123456789"){
+          
+        howMany.value = "";
+        alert.innerHTML = "";
+        compte.innerHTML = "Golden Moustache 🥸 !!!";
+        clearInterval(minuteur);
+      }
+
+
       restart.addEventListener("click",function(){
         clearInterval(minuteur);
-        howMany.value = 45;
+        howMany.value = "";
         compte.innerHTML = "";
         alert.innerHTML= "";
       })
@@ -54,8 +68,34 @@ function demarrerMinuteur(dureeEnSecondes) {
       
   });
 
- 
+  temps15.addEventListener("click",function(){
+    howMany.value = "15"
+    demarrerMinuteur(howMany.value);
+    alert.innerHTML = "";
+  });
 
+  temps30.addEventListener("click",function(){
+    howMany.value = "30"
+    demarrerMinuteur(howMany.value);
+    alert.innerHTML = "";
+  });
+
+  temps45.addEventListener("click",function(){
+    howMany.value = "45"
+    demarrerMinuteur(howMany.value);
+    alert.innerHTML = "";
+  });
+  temps60.addEventListener("click",function(){
+    howMany.value = "60"
+    demarrerMinuteur(howMany.value);
+    alert.innerHTML = "";
+  });
+
+ 
+ 
+  rachid.addEventListener('click',function(){
+    window.alert("Non pas lui svp !! au suivant");
+  })
 
     
 
