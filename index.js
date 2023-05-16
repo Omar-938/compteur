@@ -10,7 +10,6 @@ const temps60 = document.querySelector("#temps60");
 const rachid = document.querySelector("#rachid");
 
 
-
 function demarrerMinuteur(dureeEnSecondes) {
     
     let dureeEnMillisecondes = (parseInt(howMany.value) + 1) * 1000;
@@ -48,6 +47,18 @@ function demarrerMinuteur(dureeEnSecondes) {
         clearInterval(minuteur);
       }
 
+      temps15.addEventListener("click",function(){
+        clearInterval(minuteur)
+      })
+      temps30.addEventListener("click",function(){
+        clearInterval(minuteur)
+      })
+      temps45.addEventListener("click",function(){
+        clearInterval(minuteur)
+      })
+      temps60.addEventListener("click",function(){
+        clearInterval(minuteur)
+      })
 
       restart.addEventListener("click",function(){
         clearInterval(minuteur);
@@ -56,6 +67,8 @@ function demarrerMinuteur(dureeEnSecondes) {
         alert.innerHTML= "";
       })
       
+
+     
       
     }, 1000); 
   }
@@ -68,11 +81,22 @@ function demarrerMinuteur(dureeEnSecondes) {
       
   });
 
+  
+
+ 
+ 
+  rachid.addEventListener('click',function(){
+    window.alert("Non pas lui svp !! au suivant");
+  })
+
   temps15.addEventListener("click",function(){
     howMany.value = "15"
     demarrerMinuteur(howMany.value);
     alert.innerHTML = "";
   });
+
+    
+ 
 
   temps30.addEventListener("click",function(){
     howMany.value = "30"
@@ -90,17 +114,6 @@ function demarrerMinuteur(dureeEnSecondes) {
     demarrerMinuteur(howMany.value);
     alert.innerHTML = "";
   });
-
- 
- 
-  rachid.addEventListener('click',function(){
-    window.alert("Non pas lui svp !! au suivant");
-  })
-
-    
-
-    
-
 
 
 
